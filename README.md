@@ -35,7 +35,7 @@ You can view the live deployed version of this project here:
 *   GitHub Pages for deployment
 
 ## Project Structure
-travel-blog/
+```travel-blog/
 ├── index.html # Main homepage
 ├── README.md # This file
 ├── assets/ # Static assets (images)
@@ -49,7 +49,7 @@ travel-blog/
 ├── spain-post.html # Spain blog post
 ├── germany-post.html # Germany blog post
 ├── france-post.html # France blog post
-└── design-system.html # Design system showcase page
+└── design-system.html # Design system showcase page```
 
 ## Setup
 
