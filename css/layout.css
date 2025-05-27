@@ -1,0 +1,402 @@
+/* css/layout.css */
+
+/* --- Header & Navigation Styling --- */
+header {
+    background-color: var(--background-color-white);
+    /* Give header a distinct background */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--border-color-light);
+    /* Subtle line at the bottom */
+    margin-bottom: 2em;
+    /* Space below the header */
+}
+
+header .container {
+    display: flex;
+    /* Requirement: Use Flexbox at least once */
+    justify-content: space-between;
+    /* Puts space between title and nav */
+    align-items: center;
+    /* Vertically aligns items in the middle */
+}
+
+header .site-title {
+    font-family: var(--font-family-sans-serif);
+    /* Copied from general h1 style */
+    font-weight: bold;
+    /* Copied from general h1 style */
+    line-height: 1.2;
+    /* Copied from general h1 style */
+    font-size: 1.8rem;
+    /* Existing style */
+    margin-bottom: 0;
+    /* Existing style */
+    color: var(--primary-text-color);
+    /* Ensure it has a color */
+}
+
+header nav ul {
+    list-style-type: none;
+    /* Remove bullet points from navigation list */
+}
+
+header nav ul li {
+    display: inline-block;
+    /* Make list items appear side-by-side */
+    margin-left: 1.5em;
+    /* Space between nav items */
+}
+
+header nav ul li:first-child {
+    margin-left: 0;
+    /* No margin for the first nav item */
+}
+
+header nav a {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+/* --- Responsive Adjustments for Header Navigation --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        /* Stack site title and nav vertically */
+        align-items: center;
+        /* Center items when stacked */
+        gap: 0.5em;
+        /* Add a small gap between title and nav */
+    }
+
+    header .site-title {
+        /* Target .site-title instead of header h1 in media query */
+        margin-bottom: 0.5em;
+        /* Add some space below title when stacked */
+        text-align: center;
+        /* Center the site title */
+    }
+
+    header nav ul {
+        text-align: center;
+        /* Center the nav items block */
+        padding-left: 0;
+        /* Ensure no padding is pushing it off-center */
+    }
+
+    header nav ul li {
+        display: block;
+        /* Make each nav item take full width and stack */
+        margin-left: 0;
+        /* Remove left margin used for inline display */
+        margin-bottom: 0.5em;
+        /* Add space between stacked nav items */
+        text-align: center;
+        /* Center the text within each nav item */
+    }
+
+    header nav ul li:last-child {
+        margin-bottom: 0;
+        /* No bottom margin for the last stacked item */
+    }
+}
+
+
+/* --- Main Content Layout --- */
+
+/* Hero Section Styling */
+.hero {
+    text-align: center;
+    /* Center the text in the hero */
+    padding: 2em 0;
+    /* Add some vertical padding */
+    margin-bottom: 2em;
+    /* Space below the hero section */
+    background-color: var(--background-color-white);
+    /* Optional: if you want a distinct background */
+    border-radius: 8px;
+    /* Optional: match card rounding */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    /* Optional: subtle shadow */
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    color: var(--primary-text-color);
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #555555;
+    max-width: 600px;
+    /* Constrain width of paragraph for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Blog Posts Grid Layout */
+.blog-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsive columns */
+    gap: 1.5em;
+    /* Space between grid items (cards) */
+}
+
+
+/* --- Single Blog Post Layout & Styling --- */
+.blog-post-full {
+    background-color: var(--background-color-white);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    /* Additional styling for the overall article container if needed */
+}
+
+.blog-post-full .post-header {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--border-color-light);
+}
+
+.blog-post-full .post-header h1 {
+    font-size: 2.8rem;
+    /* Larger for the main post title */
+    margin-bottom: 0.25em;
+    line-height: 1.1;
+}
+
+.blog-post-full .post-meta {
+    font-size: 0.9rem;
+    color: #767676;
+    /* Corrected contrast color */
+    font-style: italic;
+}
+
+.blog-post-full .post-content {
+    margin-top: 1.5em;
+    /* Space above main content if author info is present */
+}
+
+.blog-post-full .post-content h2 {
+    /* Subheadings within the post */
+    font-size: 1.8rem;
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+    color: var(--primary-text-color);
+}
+
+.blog-post-full .post-content p {
+    font-size: 1rem;
+    /* Standard paragraph size for readability */
+    line-height: 1.7;
+    margin-bottom: 1.25em;
+}
+
+.blog-post-full .post-content blockquote {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding: 1em 1.5em;
+    background-color: #f9f9f9;
+    /* Slight background for blockquote */
+    border-left-color: var(--primary-accent-color);
+    /* Use accent color for border */
+}
+
+.blog-post-full .post-image-container {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    /* Rubric: Components - Image(s) */
+}
+
+.blog-post-full .post-image-container img {
+    max-width: 100%;
+    /* Ensure image is responsive and doesn't overflow */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 4px;
+    /* Optional: slight rounding */
+    display: block;
+    /* Remove extra space below image */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-post-full .post-image-container figcaption {
+    font-size: 0.85rem;
+    color: #666666;
+    text-align: center;
+    margin-top: 0.5em;
+    font-style: italic;
+    /* Rubric: Components - Image caption */
+}
+
+
+/* --- Related Articles Section Styling --- */
+.related-articles {
+    margin-top: 3em;
+    /* Space above this section */
+    padding-top: 1.5em;
+    border-top: 1px solid var(--border-color-light);
+}
+
+.related-articles-title {
+    font-size: 1.4rem;
+    /* Adjust size as needed */
+    color: var(--primary-text-color);
+    margin-bottom: 1em;
+    text-align: center;
+    /* Optional: center the title */
+}
+
+.related-articles ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    /* Use grid for a simple layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive columns */
+    gap: 1em;
+}
+
+.related-articles ul li a {
+    display: block;
+    /* Make the whole area clickable */
+    padding: 1em;
+    background-color: var(--background-color-light);
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--primary-accent-color);
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.related-articles ul li a:hover,
+.related-articles ul li a:focus {
+    background-color: var(--primary-accent-color);
+    color: var(--background-color-white);
+    transform: translateY(-2px);
+    /* Slight lift effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #333333;
+    /* Dark background for footer */
+    color: #f8f9fa;
+    /* Light text color for footer - intended for direct text children */
+    padding: 2em 0;
+    /* Vertical padding */
+    margin-top: 3em;
+    /* Space above the footer */
+    text-align: center;
+    /* Center the text in the footer */
+}
+
+footer p {
+    margin-bottom: 0.5em;
+    font-family: var(--font-family-sans-serif);
+    font-size: 0.9rem;
+    color: #f8f9fa;
+    /* Directly set the light text color */
+}
+
+footer a {
+    color: #cccccc;
+    /* Lighter link color for dark background */
+    text-decoration: underline;
+    /* Underline links in footer for clarity */
+}
+
+footer a:hover,
+footer a:focus {
+    color: var(--background-color-white);
+    /* Brighter link on hover */
+}
+
+
+/* --- Design System Page Specific Styles --- */
+.page-header-main {
+    text-align: center;
+    /* For the main H1 and intro p on design system page */
+    margin-bottom: 3em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid var(--border-color-light);
+}
+
+.page-header-main h1 {
+    font-size: 2.8rem;
+    /* Or your preferred H1 size */
+    margin-bottom: 0.25em;
+}
+
+.page-header-main p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.design-section {
+    margin-bottom: 3em;
+    padding: 2em;
+    background-color: var(--background-color-white);
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+}
+
+.design-section h2 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid var(--border-color-light);
+}
+
+.color-swatch-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+}
+
+.color-swatch {
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    padding: 1em;
+    text-align: center;
+}
+
+.color-swatch .swatch {
+    width: 100%;
+    height: 80px;
+    border-radius: 4px;
+    margin-bottom: 0.75em;
+    border: 1px solid #ccc;
+    /* Border for very light swatches */
+}
+
+.color-swatch p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.color-swatch code {
+    font-family: monospace;
+    background-color: #f0f0f0;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    font-size: 0.85rem;
+}
+
+.typography-example hr {
+    margin: 1.5em 0;
+    border: 0;
+    border-top: 1px solid var(--border-color-light);
+}

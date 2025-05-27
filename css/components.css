@@ -1,0 +1,271 @@
+/* css/components.css */
+
+/* --- Card Component Styling --- */
+.card {
+    background-color: var(--background-color-white);
+    /* White background for the card */
+    border: 1px solid var(--border-color-light);
+    /* Light border */
+    border-radius: 8px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Ensures content (like image) respects border-radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    display: flex;
+    /* Using flexbox for internal card layout */
+    flex-direction: column;
+    /* Stack image and content vertically */
+}
+
+.card-image {
+    width: 100%;
+    /* Make image take full width of the card */
+    height: 200px;
+    /* Fixed height for consistency, or use aspect-ratio */
+    object-fit: cover;
+    /* Scales image to cover, cropping if necessary, maintains aspect ratio */
+}
+
+.card-content {
+    padding: 1em;
+    /* Space inside the content area of the card */
+    display: flex;
+    /* Using flex for the content area */
+    flex-direction: column;
+    /* Stack title, excerpt, button vertically */
+    flex-grow: 1;
+    /* Allows card content to grow and fill space if cards are in a flex row and have different content heights */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.card-excerpt {
+    font-size: 0.9rem;
+    color: #555555;
+    /* Slightly lighter text for excerpt */
+    margin-bottom: 1em;
+    flex-grow: 1;
+    /* Allows excerpt to take up available space pushing button down */
+}
+
+
+/* --- Button Component Styling --- */
+.button {
+    display: inline-block;
+    background-color: var(--primary-accent-color);
+    color: var(--background-color-white);
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    align-self: flex-start;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #004085;
+    color: var(--background-color-white);
+    text-decoration: none;
+}
+
+/* --- Author Info Component Styling --- */
+.author-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5em;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    background-color: var(--background-color-white);
+    border-radius: 8px;
+    border: 1px solid var(--border-color-light);
+}
+
+.author-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-details {
+    flex-grow: 1;
+}
+
+.author-name {
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+    margin-top: 0;
+    margin-bottom: 0.25em;
+}
+
+.author-title,
+.author-company {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 0.25em;
+    font-style: italic;
+}
+
+.author-bio {
+    font-size: 0.9rem;
+    color: var(--primary-text-color);
+    line-height: 1.5;
+    margin-top: 0.5em;
+}
+
+
+/* --- Responsive Adjustments for Author Info --- */
+@media (max-width: 600px) {
+    .author-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1em;
+    }
+
+    .author-avatar {
+        margin-bottom: 0.5em;
+    }
+}
+
+
+/* --- Social Sharing Component Styling --- */
+.social-sharing {
+    margin-top: 2.5em;
+    padding-top: 1.5em;
+    border-top: 1px solid var(--border-color-light);
+    text-align: center;
+}
+
+.social-sharing h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+    color: var(--primary-text-color);
+}
+
+.social-sharing ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.social-sharing ul li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.social-sharing ul li:last-child {
+    margin-right: 0;
+}
+
+.social-sharing .social-link {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-sharing .social-link:hover,
+.social-sharing .social-link:focus {
+    background-color: var(--primary-accent-color);
+    color: var(--background-color-white);
+    border-color: var(--primary-accent-color);
+}
+
+
+/* --- Subscribe Section Styling --- */
+.subscribe-section {
+    background-color: var(--background-color-white);
+    /* Or a distinct accent background */
+    padding: 3em 0;
+    margin-top: 3em;
+    /* Space above this section */
+    text-align: center;
+    border-top: 1px solid var(--border-color-light);
+    /* Optional */
+    border-bottom: 1px solid var(--border-color-light);
+    /* Optional */
+}
+
+.subscribe-title {
+    font-size: 2rem;
+    /* Or use existing h2 styles */
+    color: var(--primary-text-color);
+    margin-bottom: 0.5em;
+}
+
+.subscribe-text {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 1.5em;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    /* Space between input and button */
+    max-width: 500px;
+    /* Max width for the form itself */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe-form input[type="email"] {
+    flex-grow: 1;
+    /* Allow input to take available space */
+    padding: 0.75em 1em;
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-family-sans-serif);
+}
+
+.subscribe-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary-accent-color);
+    box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.25);
+    /* Focus ring, using our darker blue */
+}
+
+.subscribe-form .button {
+    padding-top: 0.80em;
+    /* Adjust to align with input height if needed */
+    padding-bottom: 0.80em;
+    white-space: nowrap;
+    /* Prevent button text from wrapping */
+}
+
+/* Responsive adjustments for subscribe form if needed */
+@media (max-width: 500px) {
+    .subscribe-form {
+        flex-direction: column;
+        /* Stack input and button */
+        align-items: stretch;
+        /* Make them full width of the form container */
+    }
+
+    .subscribe-form input[type="email"] {
+        margin-bottom: 0.5em;
+        /* Space when stacked */
+    }
+}

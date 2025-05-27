@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE/Editor specific (optional, adjust as needed)
+.vscode/

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System - My Awesome Travel Blog</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <p class="site-title">My Awesome Travel Blog</p>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="spain-post.html">Spain</a></li>
+                    <li><a href="germany-post.html">Germany</a></li>
+                    <li><a href="france-post.html">France</a></li>
+                    <li><a href="#">Design System</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <header class="page-header-main">
+                <h1>Our Blog's Design System</h1>
+                <p>A reference for the visual styles and components used across the site.</p>
+            </header>
+
+            <!-- Color Palette Section -->
+            <section class="design-section" id="colors">
+                <h2>Color Palette</h2>
+                <div class="color-swatch-container">
+                    <div class="color-swatch">
+                        <div class="swatch" style="background-color: var(--primary-text-color);"></div>
+                        <p>Primary Text: <code>var(--primary-text-color)</code> (#333333)</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background-color: var(--primary-accent-color);"></div>
+                        <p>Primary Accent: <code>var(--primary-accent-color)</code> (#0056b3)</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background-color: var(--secondary-accent-color);"></div>
+                        <p>Secondary Accent: <code>var(--secondary-accent-color)</code> (#5cb85c)</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background-color: var(--background-color-light);"></div>
+                        <p>Light Background: <code>var(--background-color-light)</code> (#f8f9fa)</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background-color: var(--background-color-white);"></div>
+                        <p>White Background: <code>var(--background-color-white)</code> (#ffffff)</p>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch" style="background-color: var(--border-color-light);"></div>
+                        <p>Light Border: <code>var(--border-color-light)</code> (#dddddd)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Typography Section -->
+            <section class="design-section" id="typography">
+                <h2>Typography</h2>
+                <div class="typography-example">
+                    <p class="site-title">Site Title Style (p.site-title)</p>
+                    <hr>
+                    <h1>H1 - Main Page/Post Title</h1>
+                    <p>Used for the primary title of a blog post or a major section.</p>
+                    <hr>
+                    <h2>H2 - Section & Article Subheadings</h2>
+                    <p>Used for major subheadings within an article or page sections.</p>
+                    <hr>
+                    <h3>H3 - Card Titles & Minor Subheadings</h3>
+                    <p>Used for titles on blog post cards or less prominent subheadings.</p>
+                    <hr>
+                    <p>This is a standard paragraph. It uses <code>var(--font-family-serif)</code> for readability.
+                        Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit. <b>This text is bold.</b> <i>This text is italic.</i>
+                        <u>This text is
+                            underlined.</u> It also includes a <a href="#">sample link</a> which will be styled.
+                    </p>
+                    <hr>
+                    <blockquote>This is a blockquote. It's used for highlighting quoted text from another source or for
+                        emphasis. It has
+                        distinct styling including a border and italic font.</blockquote>
+                </div>
+            </section>
+
+            <!-- Interactive Elements Section -->
+            <section class="design-section" id="interactive-elements">
+                <h2>Interactive Elements</h2>
+                <h4>Link Styles</h4>
+                <p><a href="#">This is a standard link.</a> On hover, it gets an underline.</p>
+                <p><a href="#" class="button">This is a link styled as a button.</a></p>
+                <hr>
+                <h4>Button Component</h4>
+                <p>The <code>.button</code> class can be applied to <code><a></code> or <code><button></code> elements.
+                </p>
+                <button class="button">Actual <button> Element</button>
+                    <a href="#" class="button" style="margin-left: 1em;">Link <a> as Button</a>
+            </section>
+
+            <!-- Components Section -->
+            <section class="design-section" id="components">
+                <h2>Components</h2>
+                <h4>Card Component (<code>.card</code>, <code>.blog-post-card</code>)</h4>
+                <div style="max-width: 350px;"> <!-- Constrain width for demo -->
+                    <article class="card blog-post-card">
+                        <img src="../assets/images/spain-city.jpg" alt="Sample card image" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Sample Card Title</h3>
+                            <p class="card-excerpt">This is a short excerpt demonstrating the card's text content and
+                                structure.</p>
+                            <a href="#" class="button card-button">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 My Awesome Travel Blog. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

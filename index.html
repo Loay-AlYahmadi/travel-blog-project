@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Travel Blog - Home</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <p class="site-title">My Awesome Travel Blog</p>
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Subscribe</a></li>
+                    <li><a href="pages/design-system.html">Design System</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h2>Welcome to My Travels!</h2>
+                <p>Join me as I share my adventures through Spain, Germany, and France.</p>
+            </section>
+
+            <section class="blog-posts-grid" aria-labelledby="recent-posts-heading">
+                <h2 id="recent-posts-heading" class="visually-hidden">Recent Blog Posts</h2>
+
+                <!-- Blog Post Card 1: Spain -->
+                <article class="card blog-post-card">
+                    <img src="assets/images/spain-city.jpg"
+                        alt="A bustling city view in Spain with characteristic architecture" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Adventures in Sunny Spain</h3>
+                        <p class="card-excerpt">Discovering the vibrant culture, stunning architecture, and delicious
+                            tapas of Spain...</p>
+                        <a href="pages/spain-post.html" class="button card-button">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post Card 2: Germany -->
+                <article class="card blog-post-card">
+                    <img src="assets/images/neuschwanstein-castle.jpg"
+                        alt="The fairytale Neuschwanstein Castle in Germany, perched on a hill" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Exploring Historic Germany</h3>
+                        <p class="card-excerpt">From bustling Berlin to fairytale castles, my journey through the heart
+                            of Germany...</p>
+                        <a href="pages/germany-post.html" class="button card-button">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post Card 3: France -->
+                <article class="card blog-post-card">
+                    <img src="assets/images/france-champeix.jpg" alt="Scenic view of the village of Champeix in France"
+                        class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Charming France: Beyond Paris</h3>
+                        <p class="card-excerpt">The allure of French countryside, culinary delights, and unforgettable
+                            moments...</p>
+                        <a href="pages/france-post.html" class="button card-button">Read More</a>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+        <section class="subscribe-section">
+            <div class="container">
+                <h2 class="subscribe-title">Stay Updated!</h2>
+                <p class="subscribe-text">Get the latest travel stories and tips straight to your inbox.</p>
+                <form class="subscribe-form" action="#" method="POST">
+                    <label for="email-subscribe" class="visually-hidden">Your Email Address</label>
+                    <input type="email" id="email-subscribe" name="email" placeholder="Enter your email address"
+                        required>
+                    <button type="submit" class="button">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 My Awesome Travel Blog. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

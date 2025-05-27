@@ -1,0 +1,144 @@
+/* css/base.css */
+
+/* --- Basic Reset & Global Styles --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* A common and useful reset */
+    margin: 0;
+    /* Simple reset for margin */
+    padding: 0;
+    /* Simple reset for padding */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* Default sans-serif font */
+    line-height: 1.6;
+    /* Improves readability */
+    color: #333333;
+    /* Primary text color (dark gray) */
+    background-color: #f8f9fa;
+    /* Light off-white/gray background */
+}
+
+
+/* --- CSS Custom Properties (Variables) for Design System --- */
+:root {
+    --primary-text-color: #333333;
+    --primary-accent-color: #0056b3;
+    /* Darker blue for better contrast */
+    --secondary-accent-color: #5cb85c;
+    /* A green for variety, e.g. success states */
+    --background-color-light: #f8f9fa;
+    --background-color-white: #ffffff;
+    --border-color-light: #dddddd;
+    --font-family-sans-serif: 'Arial', 'Helvetica Neue', sans-serif;
+    --font-family-serif: 'Georgia', 'Times New Roman', serif;
+}
+
+
+/* --- Typography Foundations --- */
+h1,
+h2,
+h3 {
+    font-family: var(--font-family-sans-serif);
+    color: var(--primary-text-color);
+    margin-bottom: 0.75em;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* Larger for main page titles */
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+p {
+    font-family: var(--font-family-serif);
+    color: var(--primary-text-color);
+    margin-bottom: 1em;
+}
+
+p b,
+p strong {
+    /* 'strong' is semantically preferred over 'b' for importance */
+    font-weight: bold;
+}
+
+p i,
+p em {
+    /* 'em' is semantically preferred over 'i' for emphasis */
+    font-style: italic;
+}
+
+p u {
+    text-decoration: underline;
+}
+
+a {
+    color: var(--primary-accent-color);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    /* :focus is good for accessibility */
+    text-decoration: underline;
+    color: #004085;
+    /* Darken accent color on hover/focus */
+}
+
+blockquote {
+    font-family: var(--font-family-serif);
+    font-style: italic;
+    border-left: 4px solid var(--border-color-light);
+    padding-left: 1em;
+    margin-left: 0;
+    /* Reset browser default */
+    margin-right: 0;
+    /* Reset browser default */
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #555555;
+    /* Slightly muted text for quotes */
+}
+
+
+/* --- Helper & Utility Classes --- */
+.container {
+    /* Utility class for centering and constraining content width */
+    width: 90%;
+    /* Max width for content */
+    max-width: 1100px;
+    /* A common max-width for larger screens */
+    margin-left: auto;
+    /* Center the container */
+    margin-right: auto;
+    /* Center the container */
+    padding-left: 15px;
+    /* Some space on the sides */
+    padding-right: 15px;
+    /* Some space on the sides */
+}
+
+.visually-hidden {
+    /* For accessibility - hides content visually but not from screen readers */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
